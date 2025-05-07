@@ -1,0 +1,43 @@
+
+/*estilos TIPOS DE PLACOS*/
+.service-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  
+   
+}
+
+span{
+    color: #FFA725;
+}
+h2,h3{
+    text-align: center;
+    
+}
+h2{
+    margin-top: 40px;
+}
+
+.service-1 {
+    flex-basis: calc(33.3% - 10px);
+    
+}
+
+.service-1:hover{
+    transform: rotate(5deg);
+    transition: all 2s ease;
+}
+
+
+.btn-2-a,.btn-2-b,.btn-2-c{
+    padding: 10px 15px;
+    background-color: #FFA725;
+    color: black;
+}
+
+.btn-2-a,.btn-2-b,.btn-2-c:hover{
+    color: black;
+}
+
+

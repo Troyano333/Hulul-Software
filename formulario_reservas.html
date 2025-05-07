@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./css/realizar_reservas.css" />
+    <link rel="stylesheet" href="./css/media_realizar_reserv.css" />
+
+    <title>Realizar Reservas</title>
+  </head>
+  <body>
+    <h1>realizar <span class="reser-h1">reservas</span></h1>
+
+    <section class="resrvas">
+      <!-- Imagen decorativa -->
+      <div class="content-img mover">
+        <img src="./img/d-5.jpg" alt="Discoteca" />
+      </div>
+
+      <!-- Formulario de reserva -->
+      <div class="content-formulario">
+        <form action="php/procesar_reserva.php" method="POST">
+
+          <h2 class="title-h2">hu<span class="span-sub-title">lul</span></h2>
+
+          <label for="tipo">Selecciona qué tipo de palco o mesa quieres</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecciona tu palco o mesa</option>
+            <option value="Palco Vip">Palco Vip</option>
+            <option value="Palco Plata">Palco Plata</option>
+            <option value="Palco Bronce">Palco Bronce</option>
+            <option value="--------------------" disabled>--------------------</option>
+            <option value="Mesa Vip">Mesa Vip</option>
+            <option value="Mesa Plata">Mesa Plata</option>
+            <option value="Mesa Bronce">Mesa Bronce</option>
+          </select>
+
+          <label for="email">Correo electrónico</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Correo electrónico"
+            required
+          />
+
+          <label for="fecha">Selecciona una fecha:</label>
+          <input type="date" id="fecha" name="fecha" required />
+
+          <label for="hora">Selecciona una hora:</label>
+          <input type="time" id="hora" name="hora" required />
+
+          <label for="lugar">Selecciona la discoteca:</label>
+          <select id="lugar" name="lugar" required>
+            <option value="">--Selecciona--</option>
+            <option value="El Centro">El Centro</option>
+            <option value="La Castellana">La Castellana</option>
+          </select>
+
+          <p id="estadoFecha"></p>
+
+          <div class="form-txt">
+            <a href="#">Políticas <br />de Privacidad</a>
+            <a href="#">Términos <br />y condiciones</a>
+          </div>
+
+          <div class="group-btn">
+            <button type="submit" class="btn">Pagar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Validación de fecha y hora -->
+    <script>
+      document.getElementById("formReserva").addEventListener("submit", function (e) {
+        const fecha = document.getElementById("fecha").value;
+        const hora = document.getElementById("hora").value;
+        const fechaSeleccionada = new Date(fecha + "T" + hora);
+        const ahora = new Date();
+
+        if (
+          fechaSeleccionada.toDateString() === ahora.toDateString() &&
+          fechaSeleccionada.getTime() <= ahora.getTime()
+        ) {
+          e.preventDefault();
+          alert("No se puede reservar para una hora pasada el mismo día.");
+        }
+      });
+    </script>
+
+    <!-- Script externo si es necesario -->
+    <script src="./js/calendario.js"></script>
+    <script src="./js/formulario_reservas.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

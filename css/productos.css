@@ -1,0 +1,39 @@
+
+
+body{
+    background-color: #f4f5f4;
+}
+th{
+    text-transform: lowercase;
+}
+h3{
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+span{
+    color: #FFA725;
+    font-weight: bold;
+    font-size: 38px;
+    background-color: black;
+    border: 1px solid ;
+    padding: 2px;
+
+}
+.licor{
+    font-size:30px ;
+}
+
+table{
+    background-color: #e5ead4;
+}
+
+p{
+    color: black;
+}
+
+.alto{
+    width: 1280px;
+   
+}

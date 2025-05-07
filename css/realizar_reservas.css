@@ -1,0 +1,149 @@
+/* Estilos generales del formulario de reservas */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 36px;
+    color: #333;
+}
+
+.reser-h1 {
+    color: #ff9900;
+}
+
+.resrvas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Imagen */
+.content-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor del formulario */
+.content-formulario {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Título del formulario */
+.title-h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.span-sub-title {
+    color: #ff9900;
+}
+
+/* Estilo de inputs y selects */
+input, select {
+    width: 100%;
+    padding: 12px 16px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #ff9900;
+    box-shadow: 0 0 8px rgba(255, 153, 0, 0.4);
+    outline: none;
+}
+
+label {
+    margin-top: 18px;
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón */
+.group-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #ff9900;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+/* Texto inferior */
+.form-txt {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-txt a {
+    color: #777;
+    text-decoration: none;
+}
+
+.form-txt a:hover {
+    text-decoration: underline;
+}
+
+/* Estado fecha */
+#estadoFecha {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .resrvas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-img img {
+        max-width: 100%;
+    }
+
+    .content-formulario {
+        width: 90%;
+        padding: 20px;
+    }
+}

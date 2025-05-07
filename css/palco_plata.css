@@ -1,0 +1,21 @@
+.plata-txt, .crou-secio{
+    background-color: #FFF5E4;
+}
+
+.spam-plata{
+    color: #FFA725;
+    font-weight: bold;
+}
+th{
+    font-size: 18px;
+}
+
+.btn-plata{
+    padding: 9px 15px;
+    background-color: #FFA725;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    bottom: 105px;
+    left: 230px;
+}

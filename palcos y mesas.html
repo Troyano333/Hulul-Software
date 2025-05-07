@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Opciones para el evento</title>
+  <link rel="stylesheet" href="css/palcos_mesas.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo">Opciones para el evento</h1>
+    <div class="card-list">
+
+      <div class="card">
+        <h3>Palcos VIP</h3>
+        <p>Descripción de los palcos disponibles para este evento.</p>
+        <a href="palcos_vp.html">Ver Palco Vip</a>
+      </div>
+
+      <div class="card">
+        <h3>Palcos Plata</h3>
+        <p>Descripción de los palcos disponibles para este evento.</p>
+        <a href="palco_plata.html">Ver Palco Plata</a>
+      </div>
+
+      <div class="card">
+        <h3>Palcos Bronce</h3>
+        <p>Descripción de los palcos disponibles para este evento.</p>
+        <a href="palco_basico.html">Ver Palco Bronce</a>
+      </div>
+
+      <div class="card">
+        <h3>Mesa VIP</h3>
+        <p>Descripción de las mesas disponibles para este evento.</p>
+        <a href="mesa_vp.html">Ver Mesa Vip</a>
+      </div>
+
+      <div class="card">
+        <h3>Mesa Plata</h3>
+        <p>Descripción de las mesas disponibles para este evento.</p>
+        <a href="mesa_plata.html">Ver Mesa Plata</a>
+      </div>
+
+      <div class="card">
+        <h3>Mesa Bronce</h3>
+        <p>Descripción de las mesas disponibles para este evento.</p>
+        <a href="mesa_basica.html">Ver Mesa Bronce</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script> 
+  // Script para obtener el nombre del evento de la URL 
+  const urlParams = new URLSearchParams(window.location.search); 
+  const evento = urlParams.get('evento'); 
+
+  if (evento) { 
+   document.getElementById('event-name').textContent = `Opciones para: ${evento.charAt(0).toUpperCase() + evento.slice(1)}`; 
+   document.getElementById('palco-link').href += evento; 
+   document.getElementById('mesa-link').href += evento; 
+  } else { 
+   document.getElementById('event-name').textContent = 'Opciones para el evento'; 
+  } 
+  </script> 
+ </body> 
+ </html>

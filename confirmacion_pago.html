@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,18 +9,21 @@
 <body>
     <div class="confirmacion-container">
         <h1>¡Pago Exitoso!</h1>
+
         <div class="info-reserva">
             <h2>Detalles de tu Reserva</h2>
-            <p><strong>Nombre:</strong> <?= htmlspecialchars($reserva['correo']) ?></p>
-            <p><strong>Fecha:</strong> <?= htmlspecialchars($reserva['fecha']) ?></p>
-            <p><strong>Hora:</strong> <?= htmlspecialchars($reserva['hora']) ?></p>
-            <p><strong>Lugar:</strong> <?= htmlspecialchars($reserva['discoteca']) ?></p>
-            <p><strong>Tipo de Palco:</strong> <?= htmlspecialchars($reserva['tipo_palco']) ?></p>
+            <p><strong>Nombre:</strong> <span id="nombre_reserva"></span> <span id="apellido_reserva"></span></p>
+            <p><strong>Fecha:</strong> <span id="fecha_reserva"></span></p>
+            <p><strong>Hora:</strong> <span id="hora_reserva"></span></p>
+            <p><strong>Lugar:</strong> <span id="lugar_reserva"></span></p>
+            <p><strong>Tipo de Palco:</strong> <span id="palco_reserva"></span></p>
         </div>
+
         <div class="qr-code">
             <h2>Código QR</h2>
             <img src="./img/qr.png" alt="Código QR de la reserva" id="qr_imagen">
         </div>
+
         <div class="info-discoteca">
             <h2>Información de la Discoteca</h2>
             <p><strong>Nombre:</strong> Hulul Discoteck</p>
@@ -33,27 +34,30 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const datos = JSON.parse(sessionStorage.getItem("reserva"));
-            if (!datos) return;
+    document.addEventListener("DOMContentLoaded", () => {
+        const datos = JSON.parse(sessionStorage.getItem("reserva"));
+        if (!datos) return;
+
+        document.getElementById("nombre_reserva").textContent = datos.nombre;
+        document.getElementById("apellido_reserva").textContent = datos.apellido;
+        document.getElementById("fecha_reserva").textContent = datos.fecha;
+        document.getElementById("hora_reserva").textContent = datos.hora;
+        document.getElementById("lugar_reserva").textContent = datos.discoteca;
+        document.getElementById("palco_reserva").textContent = datos.tipo_palco;
+
+        // Crear el texto que se mostrará en el código QR
+        const textoQR = `Reserva para: ${datos.nombre} ${datos.apellido}
+Fecha: ${datos.fecha}
+Hora: ${datos.hora}
+Lugar: ${datos.discoteca}
+Palco: ${datos.tipo_palco}`;
+
+        // Crear la URL del QR
+        const qrURL = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(textoQR)}`;
         
-            document.getElementById("nombre_reserva").textContent = datos.correo;
-            document.getElementById("fecha_reserva").textContent = datos.fecha;
-            document.getElementById("hora_reserva").textContent = datos.hora;
-            document.getElementById("lugar_reserva").textContent = datos.discoteca;
-            document.getElementById("palco_reserva").textContent = datos.tipo_palco;
-        
-            // Crear texto QR
-            const textoQR = `Reserva para: ${datos.correo}
-        Fecha: ${datos.fecha}
-        Hora: ${datos.hora}
-        Lugar: ${datos.discoteca}
-        Palco: ${datos.tipo_palco}`;
-        
-            const qrURL = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(textoQR)}`;
-            document.getElementById("qr_imagen").src = qrURL;
-        });
-        </script>
-        
+        // Asignar la URL del QR a la imagen
+        document.getElementById("./img/qr.png").src = qrURL;
+    });
+    </script>
 </body>
 </html>

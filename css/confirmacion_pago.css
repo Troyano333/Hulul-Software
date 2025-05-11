@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.confirmacion-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+
+.info-reserva, .qr-code, .info-discoteca {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+.info-reserva h2, .qr-code h2, .info-discoteca h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+
+.info-reserva p {
+    margin: 5px 0;
+}
+
+
+#qr_imagen {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
+.info-discoteca p {
+    margin: 5px 0;
+}
+
+
+/* Estilos adicionales para mejorar la apariencia */
+.confirmacion-container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

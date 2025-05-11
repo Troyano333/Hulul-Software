@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/formulario_registro.css">
+  <title>Registro</title>
+  
+</head>
+<body>
+  <form method="POST" action="php/guardar_usuario.php">
+
+
+  <h2><span>Registro</span>Hulul</h2>
+
+  <div class="input-group">
+    <label for="nombre">Nombres Y Apellidos </label>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+
+    <label for="cedula">Cédula</label>
+    <input type="text" name="cedula" id="cedula" placeholder="Cédula" required>
+
+    <label for="direccion">Dirección</label>
+    <input type="text" name="direccion" id="direccion" placeholder="Dirección" required>
+
+    <label for="contrasena">Celular</label>
+    <input type="number" name="celular" id="celular" placeholder="Celular" required>
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+
+    <label for="contrasena">Contraseña</label>
+    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+
+     
+
+
+  </div>
+
+  <div class="form-txt">
+    <a href="#">Política de Privacidad</a>
+    <a href="#">Términos y Condiciones</a>
+  </div>
+
+  <div class="btn-2-a">
+    <button type="submit" class="btn-2-a">Registrarse</button>
+  </div>
+  
+
+  <!--  el botón de iniciar sesión -->
+  <div class="btn-2-a">
+    <a href="login.html" class="btn-2-a">Ya Tengo Una Cuenta</a>
+  </div>
+</form>
+
+
+  
+</body>
+</html>

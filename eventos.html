@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos Disponibles</title>
+  <link rel="stylesheet" href="./css/eventos.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo">Eventos Disponibles</h1>
+
+    <input type="text" id="search-event" placeholder="Buscar evento..." class="search-input">
+
+    <ul class="event-list" id="event-list">
+      <li class="event-item">
+        <h3 class="event-title">Silvestre</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laborum facere repellat...</p>
+        <a href="palcos y mesas.html" class="event-link">Ver Palcos y Mesas</a>
+      </li>
+
+      <li class="event-item">
+        <h3 class="event-title">Chawala</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia magnam placeat harum...</p>
+        <a href="palcos y mesas.html" class="event-link">Ver Palcos y Mesas</a>
+      </li>
+
+      <li class="event-item">
+        <h3 class="event-title">Ttremendo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque exercitationem hic rem non...</p>
+        <a href="palcos y mesas.html" class="event-link">Ver Palcos y Mesas</a>
+      </li>
+    </ul>
+
+    <div class="featured-events">
+      <h2>Eventos Destacados</h2>
+      <p>Próximamente, los eventos destacados...</p>
+    </div>
+  </div>
+
+  <script>
+    // Script para la búsqueda de eventos
+    document.getElementById('search-event').addEventListener('input', function () {
+      let searchValue = this.value.toLowerCase();
+      let events = document.querySelectorAll('#event-list li');
+
+      events.forEach(event => {
+        let title = event.querySelector('.event-title').textContent.toLowerCase();
+        let description = event.querySelector('p').textContent.toLowerCase();
+        if (title.includes(searchValue) || description.includes(searchValue)) {
+          event.style.display = '';
+        } else {
+          event.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

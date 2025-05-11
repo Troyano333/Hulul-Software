@@ -35,6 +35,7 @@
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {
+<<<<<<< HEAD
         // Obtiene los datos de la reserva almacenados en sessionStorage
         const datos = JSON.parse(sessionStorage.getItem("reserva"));
         
@@ -42,6 +43,11 @@
         if (!datos) return;
 
         // Muestra los detalles de la reserva en el HTML
+=======
+        const datos = JSON.parse(sessionStorage.getItem("reserva"));
+        if (!datos) return;
+
+>>>>>>> cbfa147e777e1715a42d11ebd71e193a7b47c46e
         document.getElementById("nombre_reserva").textContent = datos.nombre;
         document.getElementById("apellido_reserva").textContent = datos.apellido;
         document.getElementById("fecha_reserva").textContent = datos.fecha;
@@ -49,18 +55,30 @@
         document.getElementById("lugar_reserva").textContent = datos.discoteca;
         document.getElementById("palco_reserva").textContent = datos.tipo_palco;
 
+<<<<<<< HEAD
         // Crear el texto que se mostrará en el código QR (ahora incluye el apellido)
+=======
+        // Crear el texto que se mostrará en el código QR
+>>>>>>> cbfa147e777e1715a42d11ebd71e193a7b47c46e
         const textoQR = `Reserva para: ${datos.nombre} ${datos.apellido}
 Fecha: ${datos.fecha}
 Hora: ${datos.hora}
 Lugar: ${datos.discoteca}
 Palco: ${datos.tipo_palco}`;
 
+<<<<<<< HEAD
         // Crear la URL del QR utilizando la API de Google Chart
         const qrURL = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(textoQR)}`;
         
         // Asigna la URL del QR a la imagen del código QR
         document.getElementById("qr_png").src = qrURL;  // Cambié el id aquí
+=======
+        // Crear la URL del QR
+        const qrURL = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(textoQR)}`;
+        
+        // Asignar la URL del QR a la imagen
+        document.getElementById("./img/qr.png").src = qrURL;
+>>>>>>> cbfa147e777e1715a42d11ebd71e193a7b47c46e
     });
     </script>
 </body>

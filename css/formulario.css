@@ -1,0 +1,81 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    padding: 59px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2{
+    color: gold;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+label{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input{
+    padding: 14px 25px;
+    border-radius: 20px;
+    border: 0;
+    outline: none;
+    background-color: rgb(236, 232, 226);
+    margin-bottom: 20px;
+    color: black;
+    outline: none;
+}
+
+input::placeholder{
+    color: rgb(87, 84, 84);
+}
+
+.form-txt{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.form-txt a{
+    color: goldenrod;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.group-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.btn{
+    padding:6px 15px;
+    font-size: 14px;
+    border: 0;
+    box-shadow: 0 0 20px rgba(41, 38, 38, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.btn:hover{
+    background-color: goldenrod;
+    border-radius: 20px;
+}

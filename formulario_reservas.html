@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realizar Reservas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/realizar_reservas.css" />
+    <link rel="stylesheet" href="./css/media_realizar_reserv.css" />
+  </head>
+  <body>
+    <h1>realizar <span class="reser-h1">reservas</span></h1>
+
+    <section class="resrvas">
+      <!-- Imagen decorativa -->
+      <div class="content-img mover">
+        <img src="./img/d-5.jpg" alt="Discoteca" />
+      </div>
+
+      <!-- Formulario de reserva -->
+      <div class="content-formulario">
+        <form id="formReserva">
+          <input type="text" name="nombre" id="nombre" required placeholder="Nombre" />
+          <input type="email" name="email" id="email" required placeholder="Correo electrónico" />
+          <input type="tel" name="telefono" id="telefono" required placeholder="Teléfono" />
+          <select name="tipo_palco" id="tipo_palco" required>
+            <option value="Palco Vip">Palco Vip</option>
+            <option value="Palco Plata">Palco Plata</option>
+            <option value="Palco Bronce">Palco Bronce</option>
+            <option value="Mesa Vip">Mesa Vip</option>
+            <option value="Mesa Plata">Mesa Plata</option>
+            <option value="Mesa Bronce">Mesa Bronce</option>
+          </select>
+          <input type="date" name="fecha_reserva" id="fecha" required />
+          <input type="time" name="hora_reserva" id="hora" required />
+          <select name="lugar" id="lugar" required>
+            <option value="El Centro">El Centro</option>
+            <option value="Norte">Norte</option>
+            <option value="Sur">Sur</option>
+          </select>
+
+          <button type="submit">Reservar</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById("formReserva").addEventListener("submit", function (e) {
+        e.preventDefault();  // Prevent the default form submission
+        
+        // Capture the form data
+        const nombre = document.getElementById("nombre").value;
+        const email = document.getElementById("email").value;
+        const telefono = document.getElementById("telefono").value;
+        const tipo_palco = document.getElementById("tipo_palco").value;
+        const fecha_reserva = document.getElementById("fecha").value;
+        const hora_reserva = document.getElementById("hora").value;
+        const lugar = document.getElementById("lugar").value;
+
+        // Create the data object to store in sessionStorage
+        const reserva = {
+          nombre: nombre,
+          correo: email,
+          telefono: telefono,
+          tipo_palco: tipo_palco,
+          fecha: fecha_reserva,
+          hora: hora_reserva,
+          discoteca: lugar
+        };
+
+        // Save the reservation data to sessionStorage
+        sessionStorage.setItem("reserva", JSON.stringify(reserva));
+
+        // Redirect to the confirmation page
+        window.location.href = "confirmacion_pago.html";
+      });
+    </script>
+  </body>
+</html>

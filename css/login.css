@@ -1,0 +1,127 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d8d8d8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color:#f7f6f4;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    font-size: 2rem;
+    color: gold;  /* Color similar al diseño */
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+span{
+     color: #FFA725;
+    font-weight: bold;
+    background: #515151;
+    border: 1PX solid #FFA725;
+    padding: 1PX;
+    margin: 10px;
+    
+}
+
+.sesion{
+     color: #FFA725;
+    font-weight: bold;
+    background: #515151;
+    border: 1PX solid #FFA725;
+    padding: 1PX;
+    margin: 10px;
+}
+
+/* Campos de texto */
+input {
+    font-size: 1rem;
+    padding: 14px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.form-control{
+  border-radius: 30px;
+ background-color: rgb(208, 223, 224);
+}
+
+label{
+    font-weight: bold;
+}
+
+/* Efecto al enfocar el input */
+input:focus {
+    border-color: #ff8a00;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 138, 0, 0.3);
+    outline: none;
+}
+
+/* Botón de inicio de sesión */
+button {
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color:gold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+
+/* Enlace de registro */
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Cambio de color al pasar por encima del enlace */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensaje de error */
+#error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: none;
+    font-weight: bold;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

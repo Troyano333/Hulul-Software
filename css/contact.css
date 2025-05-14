@@ -1,0 +1,80 @@
+.contacto{
+    max-width: 1430px;
+}
+hr{
+    color: black;
+    border: 2px solid;
+}
+
+.vision{
+    background-color: #e5eef5;
+    padding: 20px;
+}
+
+.vision:hover{
+    background-color: #d3e4f1;
+    transition: all 0.5s ease-in;
+}
+.mision{
+    padding: 20px;
+    background-color: #cad6db;
+}
+
+.nav-link{
+    color: black;
+}
+
+.redes{
+    background-color: ;
+}
+
+/*iconos*/
+.bi{
+    font-size: 40px;
+}
+.bi:hover{
+color: cadetblue;
+transition: all 0.5s ease;
+}
+
+/* enlace*/
+a{
+    text-decoration: none;
+}
+
+/*section redes*/
+.redes{
+    background-color: #abccb1;
+    padding: 20px;
+    max-width: 1430px;
+    margin-top: -17px;
+    
+}
+.redes:hover{
+    transition: all 0.5s ease;
+    background-color: #b7caba;
+}
+
+.redes h3{
+    text-transform: capitalize;
+}
+
+@media(max-width:990px){
+    .contacto{
+       position: relative;
+       bottom: 20px;
+    }
+    .contacto-fila{
+        display: flex;
+        flex-direction: column;
+      
+        
+    }
+    .mision{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .vision{
+        width: 100%;
+    }
+}

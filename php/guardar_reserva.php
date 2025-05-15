@@ -1,18 +1,32 @@
 <?php
 date_default_timezone_set("America/Bogota");
 
+<<<<<<< HEAD
 // Conexión
 $conexion = new mysqli("localhost", "root", "", "trabajando_db");
+=======
+// Conexión a la base de datos
+$conexion = new mysqli("localhost", "root", "", "trabajando_db");
+
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }
 
+<<<<<<< HEAD
+=======
+// Verificar que todos los campos del formulario hayan sido enviados
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 // Verificar datos obligatorios
 if (!isset($_POST['nombre'], $_POST['apellido'], $_POST['tipo_palco'], $_POST['email'], $_POST['telefono'], $_POST['fecha_reserva'], $_POST['hora_reserva'], $_POST['lugar'])) {
     die("error: Faltan datos obligatorios.");
 }
 
+<<<<<<< HEAD
 // Obtener datos
+=======
+// Obtener los datos del formulario
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $tipo_palco = $_POST['tipo_palco'];
@@ -44,7 +58,11 @@ if ($resultado->num_rows > 0) {
 }
 $verificar->close();
 
+<<<<<<< HEAD
 // Insertar nueva reserva
+=======
+// Insertar la nueva reserva en la base de datos
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 $stmt = $conexion->prepare("INSERT INTO reservas (nombre, apellido, tipo_palco, email, telefono, fecha_reserva, hora_reserva, lugar) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssssssss", $nombre, $apellido, $tipo_palco, $email, $telefono, $fecha, $hora, $lugar);
 

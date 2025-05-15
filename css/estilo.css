@@ -11,19 +11,37 @@
 body{
     font-family: 'Poppins', sans-serif;
    
+<<<<<<< HEAD
    
 }
 img {
     max-width: 100%;
 }
+=======
+}
+
+img {
+    max-width: 100%;
+}
+
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 .contenedor {
     max-width: 1350px;
     margin: 0 auto;
     padding: 0 35px;
    /* .background-image: url(../img/11.jpg);*/
+<<<<<<< HEAD
     background-color: #FFF5E4;
    
 }
+=======
+   .background: linear-gradient(90deg, rgb(106, 98, 180) 0%, rgb(133, 133, 199) 22%, rgba(0, 7, 17, 0.829) 66%, rgb(192, 230, 236) 100%);
+    background-color: #FFF5E4;
+   
+}
+
+
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 .menu{
     display: flex;
     justify-content: space-between;
@@ -32,6 +50,7 @@ img {
     
     
 }
+<<<<<<< HEAD
 .logo{
     color:black;
     margin-left: -10px;
@@ -52,11 +71,23 @@ img {
 
 /*titulo de nuestro servicios*/
 .S{
+=======
+
+
+.logo{
+    color:black;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+span{
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     color: #FFA725;
     font-weight: bold;
     background: #515151;
     border: 1PX solid #FFA725;
     padding: 1PX;
+<<<<<<< HEAD
     margin: 10px;
     font-size: 40px;
 }
@@ -83,6 +114,11 @@ img {
 }
 /*estilos de mesas*/
 
+=======
+    
+}
+
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 
 .menu .navbar ul{
     display: flex;

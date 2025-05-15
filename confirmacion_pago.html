@@ -35,9 +35,38 @@
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {
+<<<<<<< HEAD
         const datos = JSON.parse(sessionStorage.getItem("reserva"));
         if (!datos) return;
 
+=======
+        // Verificar si se están pasando datos a través de sessionStorage o URL
+        let datos;
+
+        // Intentar obtener los datos desde sessionStorage
+        datos = JSON.parse(sessionStorage.getItem("reserva"));
+
+        // Si no hay datos en sessionStorage, obtenerlos desde la URL
+        if (!datos) {
+            const urlParams = new URLSearchParams(window.location.search);
+            datos = {
+                nombre: urlParams.get('nombre'),
+                apellido: urlParams.get('apellido'),
+                fecha: urlParams.get('fecha'),
+                hora: urlParams.get('hora'),
+                discoteca: urlParams.get('lugar'),
+                tipo_palco: urlParams.get('palco')
+            };
+        }
+
+        // Verificar si los datos existen
+        if (!datos) {
+            alert("No se han encontrado datos de reserva.");
+            return;
+        }
+
+        // Asignar los datos a los elementos del HTML
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
         document.getElementById("nombre_reserva").textContent = datos.nombre;
         document.getElementById("apellido_reserva").textContent = datos.apellido;
         document.getElementById("fecha_reserva").textContent = datos.fecha;
@@ -56,7 +85,11 @@ Palco: ${datos.tipo_palco}`;
         const qrURL = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(textoQR)}`;
         
         // Asignar la URL del QR a la imagen
+<<<<<<< HEAD
         document.getElementById("./img/qr.png").src = qrURL;
+=======
+        document.getElementById("qr_png").src = qrURL;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     });
     </script>
 </body>

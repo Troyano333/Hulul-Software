@@ -4,7 +4,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     background-color:#D8D8D8;
+=======
+    background-color:#FFF5E4;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     
     
 }
@@ -15,7 +19,10 @@ form{
     border-radius: 20px;
     text-align: center;
     width: 400px;
+<<<<<<< HEAD
     background-color:#f7f6f4;
+=======
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     
     
     
@@ -28,6 +35,7 @@ form{
 
 h2{
     color: black;
+<<<<<<< HEAD
     font-size: 40px;
     text-transform: capitalize;
     position: relative;
@@ -45,6 +53,14 @@ span{
     color: #FFA725;
    
    
+=======
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-top: -18px;
+}
+span{
+    color: #FFA725;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 }
 
 label{
@@ -88,7 +104,11 @@ input{
       
 }
 
+<<<<<<< HEAD
 .btn_cuenta{
+=======
+.btn{
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     padding:9px 15px;
     font-size: 14px;
     border: 0;
@@ -97,6 +117,7 @@ input{
     transition: all 0.2s ease-in;
     border-radius: 40px;
     background-color: #FFA725;
+<<<<<<< HEAD
     position: relative;
     margin-bottom: 20px;
     text-decoration: none;
@@ -104,6 +125,12 @@ input{
 
 
 
+=======
+    left: 139px;
+    position: relative;
+}
+
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 .btn:hover{
     background-color: chocolate;
     color: white;

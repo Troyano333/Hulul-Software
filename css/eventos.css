@@ -12,12 +12,19 @@ body {
   }
   
   .titulo {
+<<<<<<< HEAD
       color: #FFA725;
     font-weight: bold;
     background: #515151;
     border: 1PX solid #FFA725;
     padding: 15PX;
     text-align: center;
+=======
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    margin-top: 40px;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
   }
   
   .search-input {
@@ -55,7 +62,11 @@ body {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 16px;
+<<<<<<< HEAD
     background-color: #FFA725;
+=======
+    background-color: orange;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     color: white;
     text-decoration: none;
     border-radius: 6px;

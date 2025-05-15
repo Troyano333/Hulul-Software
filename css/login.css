@@ -1,7 +1,11 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
+<<<<<<< HEAD
     background-color: #d8d8d8;
+=======
+    background-color: #f4f7fc;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     margin: 0;
     padding: 0;
 }
@@ -11,7 +15,11 @@ body {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+<<<<<<< HEAD
     background-color:#f7f6f4;
+=======
+    background-color: #fff;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -22,6 +30,7 @@ body {
 /* Título */
 h2 {
     font-size: 2rem;
+<<<<<<< HEAD
     color: gold;  /* Color similar al diseño */
     margin-bottom: 25px;
     text-transform: capitalize;
@@ -45,6 +54,10 @@ span{
     border: 1PX solid #FFA725;
     padding: 1PX;
     margin: 10px;
+=======
+    color: #ff8a00;  /* Color similar al diseño */
+    margin-bottom: 25px;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 }
 
 /* Campos de texto */
@@ -53,6 +66,7 @@ input {
     padding: 14px;
     margin-bottom: 15px;
     width: 100%;
+<<<<<<< HEAD
     border: 1px solid #ddd;
     box-sizing: border-box;
     
@@ -67,6 +81,13 @@ input {
 
 label{
     font-weight: bold;
+=======
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
 }
 
 /* Efecto al enfocar el input */
@@ -81,7 +102,11 @@ input:focus {
 button {
     font-size: 1.1rem;
     padding: 15px;
+<<<<<<< HEAD
     background-color:gold;
+=======
+    background-color: #ff8a00;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     color: white;
     border: none;
     border-radius: 5px;
@@ -90,10 +115,22 @@ button {
     transition: all 0.3s ease;
 }
 
+<<<<<<< HEAD
 
 /* Enlace de registro */
 a {
     color: black;
+=======
+/* Efecto hover en el botón */
+button:hover {
+    background-color: #e07b00;
+    transform: translateY(-3px);
+}
+
+/* Enlace de registro */
+a {
+    color: #007bff;
+>>>>>>> d73901e1e9b47c6105ca7ce100b704174521a6be
     text-decoration: none;
     font-size: 0.9rem;
     margin-top: 10px;
